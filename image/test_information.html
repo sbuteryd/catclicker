@@ -6,9 +6,8 @@
 </head>
 <body>
 
-
+</body>
 <script>
-    // 清屏
     document.body.innerHTML = '';
     document.body.style.background="white";
 
@@ -25,7 +24,7 @@
         elem.textContent = num;
 
         // ... 然后当点击 (click) 的时候，使用 alert() 提示这个数字
-        elem.addEventListener('click', function(numCopy) {
+        elem.addEventListener('click', function() {
             alert(num);
         });
 
@@ -33,5 +32,4 @@
         document.body.appendChild(elem);
     };
 </script>
-</body>
 </html>

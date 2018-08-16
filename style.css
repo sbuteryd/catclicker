@@ -1,0 +1,17 @@
+div {
+    text-align: center;
+}
+li{
+    display: inline;
+    list-style-type: none;
+    padding: 10px;
+}
+
+img {
+    width: 500px;
+}
+
+#count_number {
+    width: 200px;
+    margin-left: 230px;
+}

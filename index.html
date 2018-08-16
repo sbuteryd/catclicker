@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<ul id ="guss">
+    <li><button class="first" >fist</button></li>
+    <li><button class="second">second</button></li>
+    <li><button class="third">third</button></li>
+    <li><button class="fourth">fourth</button></li>
+</ul>
+
+<button type="button" id="count_number">0</button>
+
+<div class="count">
+    <img src="image/fist.jpg" class ="cat" alt="">
+</div>
+
+</body>
+<script>
+
+    let image = ["image/fist.jpg",
+        "image/second.jpg","image/third.jpg",
+        "image/four.jpg"];
+    let div = document.querySelector('#guss');
+    let guss = document.querySelector('.cat');
+
+    //count
+    let savePictiure = document.querySelector('#count_number');
+    let count = 0;
+
+
+
+     function changeP (evt){
+         count = 0;
+         savePictiure.textContent = 0;
+         let save = evt.target.className;
+         console.log(save);
+         if (save === 'first') {
+
+             guss.setAttribute('src', image[0])
+         }else if (save === 'second'){
+             console.log(save);
+             guss.setAttribute('src', image[1])
+         }else if (save ==='third'){
+             guss.setAttribute('src',image[2])
+         }else if (save === 'fourth'){
+             guss.setAttribute('src',image[3])
+         }
+     }
+
+     div.addEventListener('click',changeP);
+    //
+
+
+
+
+//    picrture
+
+    guss.addEventListener('click',function (evnt) {
+        count +=1;
+        console.log(savePictiure.textContent = count)
+    })
+
+</script>
+
+</html>
